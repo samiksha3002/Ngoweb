@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .popup-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .popup-container h2 {
+            color: #c6140b;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .popup-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .btn-home {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        .btn-home:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-home:focus {
+            outline: none;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .popup-container {
+                padding: 20px;
+            }
+
+            .popup-container h2 {
+                font-size: 24px;
+            }
+
+            .popup-container p {
+                font-size: 16px;
+            }
+
+            .btn-home {
+                font-size: 18px;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .popup-container h2 {
+                font-size: 20px;
+            }
+
+            .popup-container p {
+                font-size: 14px;
+            }
+
+            .btn-home {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Success Confirmation Popup -->
+    <div class="popup-container">
+        <h2>Payment Declined!</h2>
+        <p>Sorry!! We are unable to process your request at this time. Please try again later.</p>
+        <button class="btn-home" onclick="returnHome()">Return to Home Page</button>
+    </div>
+
+    <script>
+        function returnHome() {
+            window.location.href = "templates/index2.html"; // Redirect to the homepage
+        }
+    </script>
+
+</body>
+</html>
